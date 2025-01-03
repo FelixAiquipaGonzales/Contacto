@@ -1,5 +1,7 @@
+// se procedio a crear la clase Entity 
+// su funcion es mapear la tabla de la base de datos lo cual usar ORM como metodologia.
 package pe.edu.sencico.contacto.entity;
-
+ //importamos las clases y librerias de java.
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,19 +10,18 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+@Entity // con esta anotacion mencionamos que la clase entity es es el dominio de la tabla contacto de la base de datos.
 @Table(name = "contactos", schema = "pl")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Contacto {
 
-	@Id
+	@Id 
 	@Column(name = "idc")
 	private Long id;
 	
